@@ -2,12 +2,8 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"strings"
 )
-
-//5-28-21
-
-
 
 // //5-27-21
 // func sayGreeting(n string) {
@@ -28,7 +24,32 @@ import (
 // 	return math.Pi * r * r
 // }
 
+// //5-28-21
+
+// func getInitials(n string) (string, string) {
+// 	s := strings.ToUpper(n)
+// 	names := strings.Split(s, " ")
+
+// 	var initials []string
+// 	for _, v := range names {
+// 		initials = append(initials, v[:1])
+// 	}
+
+// 	if len(initials) > 1 {
+// 		return initials[0], initials[1]
+// 	}
+// 	return initials[0], "_"
+// }
+
 func main() {
+
+	// //5-28-21
+	// fn1, sn1 := getInitials("tifa lockhart")
+	// fmt.Println(fn1, sn1)
+	// fn2, sn2 := getInitials("Brandt Campbell")
+	// fmt.Println(fn2, sn2)
+	// fn3, sn3 := getInitials("dick")
+	// fmt.Println(fn3, sn3)
 
 	//5-27-21
 	//see above main
@@ -46,13 +67,8 @@ func main() {
 	// a2 := circleArea(15)
 	// a3 := circleArea(1)
 
-
 	// fmt.Println(a1, a2, a3)
 	// fmt.Printf("The area of each circle is %0.3f, %0.3f, and %0.3f, respectively \n", a1, a2, a3)
-
-
-
-
 
 	//5-26-21
 
@@ -105,8 +121,6 @@ func main() {
 
 	// 	fmt.Printf("the value at position %v is %v \n", index, value)
 	// }
-
-
 
 	//5-25-21
 
