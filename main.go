@@ -38,19 +38,54 @@ import "fmt"
 // 	return initials[0], "_"
 // }
 
-var score = 99.5
+// //5-31-21
+
+// var score = 99.5
 
 func main() {
 
-	//5-31-21
+	//6-1-21
 
-	sayHello("Brandt")
-
-	for _, v := range points {
-		fmt.Println(v)
+	menu := map[string]float64{
+		"soup":           4.99,
+		"pie":            7.99,
+		"salad":          6.99,
+		"toffee pudding": 3.55,
 	}
 
-	showScore()
+	fmt.Println(menu)
+	fmt.Println(menu["pie"])
+
+	//looping maps
+	for k, v := range menu {
+		fmt.Println(k, "-", v)
+	}
+
+	// ints as key type
+	phonebook := map[int]string{
+		2345264: "mario",
+		9847643: "peach",
+		8348744: "luigi",
+	}
+
+	fmt.Println(phonebook)
+	fmt.Println(phonebook[2345264])
+
+	phonebook[2345264] = "bowser"
+	fmt.Println(phonebook)
+	fmt.Println(phonebook[2345264])
+
+
+
+	// //5-31-21
+
+	// sayHello("Brandt")
+
+	// for _, v := range points {
+	// 	fmt.Println(v)
+	// }
+
+	// showScore()
 
 	// //5-28-21
 	// fn1, sn1 := getInitials("tifa lockhart")
