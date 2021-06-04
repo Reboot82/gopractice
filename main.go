@@ -44,9 +44,8 @@ import "fmt"
 
 //6-2-21
 
-func updateName(x string) string {
-	x = "wedge"
-	return x
+func updateName(x *string) {
+	*x = "wedge"
 }
 
 func updateMenu(y map[string]float64) {
@@ -60,7 +59,13 @@ func main() {
 	// group A types - > strings, ints, bools, floate, arrays, structs
 	name := "cloud"
 
-	name = updateName(name)
+	// updateName(name)
+	fmt.Println("memory address of name is: ", &name)
+	m := &name
+	// fmt.Println(m)
+	// fmt.Println("value at memory addres: ", *m)
+	fmt.Println(name)
+	updateName(m)
 	fmt.Println(name)
 
 	// group B types - > slices, maps, functions
