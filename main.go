@@ -42,40 +42,69 @@ import "fmt"
 
 // var score = 99.5
 
+//6-2-21
+
+func updateName(x string) string {
+	x = "wedge"
+	return x
+}
+
+func updateMenu(y map[string]float64) {
+	y["coffee"] = 2.99
+}
+
 func main() {
 
-	//6-1-21
+	//6-2-21
 
+	// group A types - > strings, ints, bools, floate, arrays, structs
+	name := "cloud"
+
+	name = updateName(name)
+	fmt.Println(name)
+
+	// group B types - > slices, maps, functions
 	menu := map[string]float64{
-		"soup":           4.99,
-		"pie":            7.99,
-		"salad":          6.99,
-		"toffee pudding": 3.55,
+		"pie":       5.95,
+		"ice cream": 3.99,
 	}
+
+	updateMenu(menu)
 
 	fmt.Println(menu)
-	fmt.Println(menu["pie"])
-
-	//looping maps
-	for k, v := range menu {
-		fmt.Println(k, "-", v)
-	}
-
-	// ints as key type
-	phonebook := map[int]string{
-		2345264: "mario",
-		9847643: "peach",
-		8348744: "luigi",
-	}
-
-	fmt.Println(phonebook)
-	fmt.Println(phonebook[2345264])
-
-	phonebook[2345264] = "bowser"
-	fmt.Println(phonebook)
-	fmt.Println(phonebook[2345264])
+	fmt.Println(menu["coffee"])
 
 
+	// //6-1-21
+
+	// menu := map[string]float64{
+	// 	"soup":           4.99,
+	// 	"pie":            7.99,
+	// 	"salad":          6.99,
+	// 	"toffee pudding": 3.55,
+	// }
+
+	// fmt.Println(menu)
+	// fmt.Println(menu["pie"])
+
+	// //looping maps
+	// for k, v := range menu {
+	// 	fmt.Println(k, "-", v)
+	// }
+
+	// // ints as key type
+	// phonebook := map[int]string{
+	// 	2345264: "mario",
+	// 	9847643: "peach",
+	// 	8348744: "luigi",
+	// }
+
+	// fmt.Println(phonebook)
+	// fmt.Println(phonebook[2345264])
+
+	// phonebook[2345264] = "bowser"
+	// fmt.Println(phonebook)
+	// fmt.Println(phonebook[2345264])
 
 	// //5-31-21
 
