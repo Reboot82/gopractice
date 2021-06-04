@@ -24,32 +24,32 @@ import (
 // 	return math.Pi * r * r
 // }
 
-// //5-28-21
+//5-28-21
 
-// func getInitials(n string) (string, string) {
-// 	s := strings.ToUpper(n)
-// 	names := strings.Split(s, " ")
+func getInitials(n string) (string, string) {
+	s := strings.ToUpper(n)
+	names := strings.Split(s, " ")
 
-// 	var initials []string
-// 	for _, v := range names {
-// 		initials = append(initials, v[:1])
-// 	}
+	var initials []string
+	for _, v := range names {
+		initials = append(initials, v[:1])
+	}
 
-// 	if len(initials) > 1 {
-// 		return initials[0], initials[1]
-// 	}
-// 	return initials[0], "_"
-// }
+	if len(initials) > 1 {
+		return initials[0], initials[1]
+	}
+	return initials[0], "_"
+}
 
 func main() {
 
-	// //5-28-21
-	// fn1, sn1 := getInitials("tifa lockhart")
-	// fmt.Println(fn1, sn1)
-	// fn2, sn2 := getInitials("Brandt Campbell")
-	// fmt.Println(fn2, sn2)
-	// fn3, sn3 := getInitials("dick")
-	// fmt.Println(fn3, sn3)
+	//5-28-21
+	fn1, sn1 := getInitials("tifa lockhart")
+	fmt.Println(fn1, sn1)
+	fn2, sn2 := getInitials("Brandt Campbell")
+	fmt.Println(fn2, sn2)
+	fn3, sn3 := getInitials("dick")
+	fmt.Println(fn3, sn3)
 
 	//5-27-21
 	//see above main
