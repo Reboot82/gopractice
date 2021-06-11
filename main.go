@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
 
 // //5-27-21
 // func sayGreeting(n string) {
@@ -52,20 +57,52 @@ import "fmt"
 // 	y["coffee"] = 2.99
 // }
 
+//6-8-21
+
+func getInput(prompt string, r *bufio.Reader) (string, error) {
+	fmt.Print(prompt)
+	input, err := r.ReadString('\n')
+
+	return strings.TrimSpace(input), err
+}
+
+func createBill() bill {
+	reader := bufio.NewReader(os.Stdin)
+	name, _ := getInput("Create a new bill name: ", reader)
+
+	b := newBill(name)
+	fmt.Println("Created the bill - ", b.name)
+
+	return b
+}
+
+func promptOptions(b bill) {
+	reader := bufio.NewReader(os.Stdin)
+
+	opt, _ := getInput("Choose option (a - add item, s - save bill, t - add tip): ", reader)
+	fmt.Println(opt)
+
+}
+
 func main() {
 
-	//6-3-21, etc.
+	//6-8-21
 
-	myBill := newBill("my bill")
+	myBill := createBill()
+	promptOptions(myBill)
 
-	myBill.addItem("onion soup", 4.50)
-	myBill.addItem("veg pie", 8.95)
-	myBill.addItem("toffee pudding", 4.95)
-	myBill.addItem("coffee", 3.25)
+	// //6-3-21, etc.
 
-	myBill.updateTip(10)
+	// myBill := newBill("my bill")
 
-	fmt.Println(myBill.format())
+	// myBill.addItem("onion soup", 4.50)
+	// myBill.addItem("veg pie", 8.95)
+	// myBill.addItem("toffee pudding", 4.95)
+	// myBill.addItem("coffee", 3.25)
+
+	// myBill.updateTip(10)
+
+	// fmt.Println(myBill.format())
 
 	// //6-2-21
 
