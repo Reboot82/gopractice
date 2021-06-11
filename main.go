@@ -42,42 +42,47 @@ import "fmt"
 
 // var score = 99.5
 
-//6-2-21
+// //6-2-21
 
-func updateName(x *string) {
-	*x = "wedge"
-}
+// func updateName(x *string) {
+// 	*x = "wedge"
+// }
 
-func updateMenu(y map[string]float64) {
-	y["coffee"] = 2.99
-}
+// func updateMenu(y map[string]float64) {
+// 	y["coffee"] = 2.99
+// }
 
 func main() {
 
-	//6-2-21
+	//6-3-21
 
-	// group A types - > strings, ints, bools, floate, arrays, structs
-	name := "cloud"
+	myBill := newBill("my bill")
+	fmt.Println(myBill)
 
-	// updateName(name)
-	fmt.Println("memory address of name is: ", &name)
-	m := &name
-	// fmt.Println(m)
-	// fmt.Println("value at memory addres: ", *m)
-	fmt.Println(name)
-	updateName(m)
-	fmt.Println(name)
+	// //6-2-21
 
-	// group B types - > slices, maps, functions
-	menu := map[string]float64{
-		"pie":       5.95,
-		"ice cream": 3.99,
-	}
+	// // group A types - > strings, ints, bools, floate, arrays, structs
+	// name := "cloud"
 
-	updateMenu(menu)
+	// // updateName(name)
+	// fmt.Println("memory address of name is: ", &name)
+	// m := &name
+	// // fmt.Println(m)
+	// // fmt.Println("value at memory addres: ", *m)
+	// fmt.Println(name)
+	// updateName(m)
+	// fmt.Println(name)
 
-	fmt.Println(menu)
-	fmt.Println(menu["coffee"])
+	// // group B types - > slices, maps, functions
+	// menu := map[string]float64{
+	// 	"pie":       5.95,
+	// 	"ice cream": 3.99,
+	// }
+
+	// updateMenu(menu)
+
+	// fmt.Println(menu)
+	// fmt.Println(menu["coffee"])
 
 
 	// //6-1-21
