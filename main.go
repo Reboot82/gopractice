@@ -57,7 +57,8 @@ func main() {
 	//6-3-21
 
 	myBill := newBill("my bill")
-	fmt.Println(myBill)
+
+	fmt.Println(myBill.format())
 
 	// //6-2-21
 
@@ -83,7 +84,6 @@ func main() {
 
 	// fmt.Println(menu)
 	// fmt.Println(menu["coffee"])
-
 
 	// //6-1-21
 
