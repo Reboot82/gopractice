@@ -54,9 +54,16 @@ import "fmt"
 
 func main() {
 
-	//6-3-21
+	//6-3-21, etc.
 
 	myBill := newBill("my bill")
+
+	myBill.addItem("onion soup", 4.50)
+	myBill.addItem("veg pie", 8.95)
+	myBill.addItem("toffee pudding", 4.95)
+	myBill.addItem("coffee", 3.25)
+
+	myBill.updateTip(10)
 
 	fmt.Println(myBill.format())
 
