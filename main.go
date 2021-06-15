@@ -110,7 +110,8 @@ func promptOptions(b bill) {
 		}
 		promptOptions(b)
 	case "s":
-		fmt.Println("You chose to save the bill", b)
+		b.save()
+		fmt.Println("You chose to save the bill for: ", b.name)
 		break
 	default:
 		fmt.Println("That was not a valid option...")
